@@ -1,0 +1,90 @@
+[
+    {
+        "key": "cmd+up",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+down",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+cmd+down",
+        "command": "notebook.cell.copyDown",
+        "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+        "key": "shift+cmd+down",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+cmd+down",
+        "command": "markdown.extension.onCopyLineDown",
+        "when": "editorTextFocus && !editorReadonly && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+    },
+    {
+        "key": "shift+cmd+up",
+        "command": "notebook.cell.copyUp",
+        "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+        "key": "shift+cmd+up",
+        "command": "editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+cmd+up",
+        "command": "markdown.extension.onCopyLineUp",
+        "when": "editorTextFocus && !editorReadonly && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+    },
+    {
+        "key": "cmd+l",
+        "command": "editor.action.selectHighlights",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+l",
+        "command": "selectAllSearchEditorMatches",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "cmd+l",
+        "command": "notebook.selectAllFindMatches",
+        "when": "config.notebook.multiCursor.enabled && notebookFindWidgetFocused || config.notebook.multiCursor.enabled && notebookCellEditorFocused && activeEditor == 'workbench.editor.notebook'"
+    },
+    {
+        "key": "alt+enter",
+        "command": "editor.action.inlineSuggest.commit",
+        "when": "inInlineEditsPreviewEditor"
+    },
+    {
+        "key": "alt+right",
+        "command": "editor.action.inlineSuggest.showNext",
+        "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "alt+left",
+        "command": "editor.action.inlineSuggest.showPrevious",
+        "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "cmd+right",
+        "command": "editor.action.marker.next",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+left",
+        "command": "editor.action.marker.prev",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+p",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "alt+p",
+        "command": "workbench.action.quickOpen"
+    }
+]
