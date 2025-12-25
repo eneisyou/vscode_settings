@@ -1,0 +1,48 @@
+{
+	"File Header - C-style": {
+		"prefix": "sni",
+		"scope": "csharp,javascript,typescript,java,cpp,c,go,rust",
+		"body": [
+			"/**",
+			" * File: $TM_FILENAME",
+			" * Author: ${3:eneisyou}",
+			" * Email: ${2:eneisyou@gmail.com}",
+			" * Created: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+			" * Description: ${1:insert file description}",
+			" */",
+			"",
+			"$0"
+		]
+	},
+	"File Header - Python/Shell": {
+		"prefix": "sni",
+		"scope": "python,shellscript,yaml,dockerfile",
+		"body": [
+			"${4:#!/usr/bin/env python3}",
+			"# -*- coding: utf-8 -*-",
+			"",
+			"# File: $TM_FILENAME",
+			"# Author: ${3:eneisyou}",
+			"# Email: ${2:eneisyou@gmail.com}",
+			"# Created: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+			"# Description: ${1:insert file description}",
+			"",
+			"$0"
+		]
+	},
+	"File Header - HTML/XML": {
+		"prefix": "sni",
+		"scope": "html,xml",
+		"body": [
+			"<!--",
+			"  File: $TM_FILENAME",
+			"  Author: ${3:eneisyou}",
+			"  Email: ${2:eneisyou@gmail.com}",
+			"  Created: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+			"  Description: ${1:insert file description}",
+			"-->",
+			"",
+			"$0"
+		]
+	}
+}
