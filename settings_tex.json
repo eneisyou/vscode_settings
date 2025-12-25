@@ -1,0 +1,116 @@
+{
+  // ===================================================================
+  // LaTeX Workshop 精简配置 - 支持日语/中文/英语
+  // ===================================================================
+  // === 预览设置 ===
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.view.pdf.tab.editorGroup": "right",
+  "latex-workshop.view.pdf.internal.synctex.keybinding": "ctrl-click",
+  "latex-workshop.synctex.afterBuild.enabled": true,
+  // === 输出目录 ===
+  "latex-workshop.latex.outDir": "%DIR%/out",
+  // === 自动构建 ===
+  "latex-workshop.latex.autoBuild.run": "onFileChange",
+  "latex-workshop.latex.build.forceRecipeUsage": true,
+  "latex-workshop.latex.recipe.default": "lastUsed",
+  // === 减少弹窗 ===
+  "latex-workshop.message.error.show": false,
+  "latex-workshop.message.warning.show": false,
+  // === 工具定义 ===
+  "latex-workshop.latex.tools": [
+    // 日语 LaTeX
+    {
+      "name": "latexmk (uplatex)",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdfdvi",
+        "-e",
+        "$latex = 'uplatex %O -synctex=1 %S'",
+        "-e",
+        "$dvipdf = 'dvipdfmx %O -o %D %S'",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ]
+    },
+    // 中文/现代字体
+    {
+      "name": "latexmk (xelatex)",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-xelatex",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ]
+    },
+    // 传统英文
+    {
+      "name": "latexmk (pdflatex)",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ]
+    }
+  ],
+  // === 配方 ===
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "upLaTeX（日本語）",
+      "tools": [
+        "latexmk (uplatex)"
+      ]
+    },
+    {
+      "name": "XeLaTeX（中文）",
+      "tools": [
+        "latexmk (xelatex)"
+      ]
+    },
+    {
+      "name": "pdfLaTeX（English）",
+      "tools": [
+        "latexmk (pdflatex)"
+      ]
+    }
+  ],
+  // === 自动清理 ===
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.latex.clean.method": "glob",
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.log",
+    "*.toc",
+    "*.lof",
+    "*.lot",
+    "*.out",
+    "*.fls",
+    "*.fdb_latexmk",
+    "*.synctex.gz(busy)",
+    "*.bbl",
+    "*.bcf",
+    "*.blg",
+    "*.run.xml",
+    "*.idx",
+    "*.ind",
+    "*.ilg",
+    "*.dvi",
+    "*.xdv"
+  ],
+  // === 文件关联 ===
+  "files.associations": {
+    "*.tex": "latex",
+    "*.cls": "latex",
+    "*.sty": "latex",
+    "*.bib": "bibtex"
+  }
+}
